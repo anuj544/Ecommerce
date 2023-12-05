@@ -2,6 +2,7 @@
     <!-- <div v-for="item in useMyStore().itemdata" :key="item.i">  -->
    <div class="container mx-auto h-screen">
      <h1 class="text-2xl font-bold mb-4">Shopping Cart</h1>
+     <button></button>
      <div v-for="item in useMyStore().itemdata" :key="item.i"> 
      <div class="flex flex-wrap -mx-4">
        <div class="w-full">
