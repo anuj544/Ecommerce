@@ -1,11 +1,16 @@
 import { defineStore } from 'pinia';
+import { idText } from 'typescript';
 
 
 export const useMyStore = defineStore('productStore',({
     state:()=>({
            data:[],
-           selectedImage:' ',
-           selectedprice:0,
+           itemdata:[{
+            i:0,
+            im:'',
+            ip:0,
+           }],
+        
     }),
 
     actions:{
@@ -24,13 +29,20 @@ export const useMyStore = defineStore('productStore',({
         },
 
 
-
-        setselectedimage(image){
-            this.selectedImage=image;
-        },
-
-        setselectedprice(price){
-            this.selectedprice=price;
+         itemsadded(itemid,itemimage,itemprice){
+            this.itemdata.push({
+              i:itemid,
+              im:itemimage,
+              ip:itemprice,
+            });
+             console.log("called");
         }
+        // setselectedimage(image){
+        //     this.selectedImage=image;
+        // },
+
+        // setselectedprice(price){
+        //     this.selectedprice=price;
+        // }
     },
 }));
