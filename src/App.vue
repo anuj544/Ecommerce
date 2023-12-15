@@ -2,8 +2,6 @@
 <template>
   <!-- <div class="bg-red-400">Cool</div> -->
   <!-- <Onetwo /> -->
-<main class="relative w-screen h-screen overflow-hidden">
-
   <header>
   <nav class="flex justify-center space-x-12 items-center my-0 bg-black text-gray-400 ">
     <router-link to="/">Home</router-link>
@@ -17,6 +15,8 @@
       </router-link>
     </nav>
   </header>
+<main class="relative w-screen h-auto border-b-2 border-red-500 overflow-hidden">
+
     <router-view />
 </main>
   
